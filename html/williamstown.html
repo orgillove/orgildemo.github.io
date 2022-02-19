@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta name="description" content="Graduation Exhibition Website">
+     <meta name="keywords" content="graduation, Monash, Design students, exhibition, Poker">
+     <meta name="author" content="Bran Fan">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Williamstown</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #street-view {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="street-view">
+      <a href="home.html#section_Heart"><img src="../image/arrow.svg" style="margin: 20em 2em;width: 100px; height: 100px;position: fixed; z-index: 2; transform:rotate(90deg);"></a>
+    </div>
+    <script>
+      var panorama;
+      function initialize() {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('street-view'),
+            {
+              position: {lat: -37.861336, lng: 144.905679},
+              pov: {heading: 165, pitch: 0},
+              zoom: 1
+            });
+      }
+    </script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj0Pj1RItiwJGjGxeyOz680hy7-kDsKVA&callback=initialize">
+    </script>
+  </body>
+</html>
